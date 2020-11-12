@@ -276,8 +276,8 @@ def performDiff(args, ts, gsTest, gsTests, referenceFilename, studentFilename):
     with open(referenceFilename) as f1, open(studentFilename) as f2:
 
         # Hack to make comparison less picky about final new lines
-        lines_from_f1 = list(map(lambda x: x.strip(), f1.readlines()))
-        lines_from_f2 = list(map(lambda x: x.strip(), f2.readlines()))
+        # lines_from_f1 = list(map(lambda x: x.strip(), f1.readlines()))
+        # lines_from_f2 = list(map(lambda x: x.strip(), f2.readlines()))
 
         diffs = list(difflib.unified_diff(lines_from_f1, lines_from_f2,
                                           fromfile="expected", tofile="actual"))
